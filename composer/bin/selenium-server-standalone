@@ -1,0 +1,5 @@
+#!/bin/sh
+
+SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
+
+java -jar "${SCRIPT_DIR}/selenium-server-standalone-2.39.0.jar"
