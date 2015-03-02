@@ -17,4 +17,4 @@ $ bin/selenium-server-standalone -port 4445
 
 
 Release numbers are synchronised with the Selenium versions.
-Version of this release is *v2.44.0*
+Version of this release is *v2.45.0*
