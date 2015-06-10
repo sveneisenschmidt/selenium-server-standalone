@@ -1,11 +1,7 @@
-#!/bin/sh
-
-#see http://stackoverflow.com/questions/7665/how-to-resolve-symbolic-links-in-a-shell-script
-SELF_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P) && SELF_PATH=$SELF_PATH/$(basename -- "$0")
-while [ -h "$SELF_PATH" ]; do
-    DIR=$(dirname -- "$SELF_PATH")
-    SYM=$(readlink "$SELF_PATH")
-    SELF_PATH=$(cd "$DIR" && cd $(dirname -- "$SYM") && pwd)/$(basename -- "$SYM")
-done
-
-java -jar "${SELF_PATH}.jar" -Dwebdriver.chrome.driver=chromedriver "$@"
+#!/usr/bin/env php
+<?php
+$file = __FILE__;
+$dir  = __DIR__;
+array_shift($argv); //removing file arg
+$args = implode(' ', $argv);
+`java -jar "$file.jar" -Dwebdriver.chrome.driver="$dir/chromedriver" $args`;
