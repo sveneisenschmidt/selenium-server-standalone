@@ -1,7 +1,5 @@
 #!/usr/bin/env php
 <?php
-$file = __FILE__;
-$dir  = __DIR__;
 array_shift($argv); //removing file arg
 $args = implode(' ', $argv);
-`java -jar "$file.jar" -Dwebdriver.chrome.driver="$dir/chromedriver" $args`;
+shell_exec('java -jar "'.__FILE__.'.jar" -Dwebdriver.chrome.driver="'.__DIR__.'/chromedriver" '.$args);
