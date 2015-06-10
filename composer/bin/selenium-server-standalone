@@ -8,4 +8,4 @@ while [ -h "$SELF_PATH" ]; do
     SELF_PATH=$(cd "$DIR" && cd $(dirname -- "$SYM") && pwd)/$(basename -- "$SYM")
 done
 
-java -jar "${SELF_PATH}.jar" "$@"
+java -jar "${SELF_PATH}.jar" -Dwebdriver.chrome.driver=chromedriver "$@"
