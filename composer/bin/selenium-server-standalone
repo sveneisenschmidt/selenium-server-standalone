@@ -2,4 +2,4 @@
 <?php
 array_shift($argv); //removing file arg
 $args = implode(' ', $argv);
-shell_exec('java -jar "'.__FILE__.'.jar" -Dwebdriver.chrome.driver="'.__DIR__.'/chromedriver" '.$args);
+shell_exec('exec java -jar "'.__FILE__.'.jar" -Dwebdriver.chrome.driver="'.__DIR__.'/chromedriver" '.$args);
