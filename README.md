@@ -17,7 +17,7 @@ composer require se/selenium-server-standalone
 composer install
 ```
 
-The command `composer install` will make the selenium executable from isnide `bin`.
+The command `composer install` will make the selenium executable from inside `bin`.
 
 ## Usage
 
