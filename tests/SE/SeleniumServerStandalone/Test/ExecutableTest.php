@@ -58,4 +58,13 @@ class ExecutableTest extends \PHPUnit_Framework_TestCase
     {
         $this->markTestIncomplete( 'This test has not been implemented yet.');
     }
+
+    /**
+     *
+     * @test
+     */
+    public function selenium_server_executable_runs_chromedriver()
+    {
+        $this->markTestIncomplete( 'This test has not been implemented yet.');
+    }
 }
