@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+$message = <<<EOF
+\n\nThe executable composer/bin/selenium-server-standalone
+is deprecated since version 2.47.0 and will be removed in 2.48.0.
+Use bin/selenium-server-standalone instead.\n\n
+EOF;
+
+trigger_error($message, E_USER_DEPRECATED);
