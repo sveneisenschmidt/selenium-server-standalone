@@ -1,9 +1,25 @@
-selenium-server-standalone
-==========================
+# selenium-server-standalone
 
 Composer distribution of Selenium Server Standalone, the browser automation framework. 
 Adds a executable to your composer bin directory.
 
+
+## Installation
+
+#### Inside your composer-powered project
+```bash
+composer require se/selenium-server-standalone
+```
+
+#### Standalone
+
+```bash
+composer install
+```
+
+The command `composer install` will make the selenium executable from isnide `bin`.
+
+## Usage
 
 ```bash
 $ bin/selenium-server-standalone
