@@ -8,6 +8,10 @@ language: php
 cache:
   apt: true
 
+addons:
+  apt_packages:
+    - gcj-jdk
+
 php:
   - 5.5
   - 5.6
