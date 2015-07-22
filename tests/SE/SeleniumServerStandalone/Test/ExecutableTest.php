@@ -10,14 +10,19 @@
 
 namespace SE\SeleniumServerStandalone\Test;
 
-class DummyTest extends \PHPUnit_Framework_TestCase
+class ExecutableTest extends \PHPUnit_Framework_TestCase
 {
     /**
      *
      * @test
      */
-    public function does_run_correctly()
+    public function old_binary_triggers_deprecation()
     {
-        $this->assertTrue(true);
+
+        $directory = sprintf('%s/../composer/bin', TESTS_DIR);
+        $executable = sprintf('%s/selenium-server-standalone 2>&1', realpath($directory));
+
+        $this->expectOutputRegex('/PHP Deprecated/');
+        passthru($executable);
     }
 }
