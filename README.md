@@ -1,7 +1,8 @@
 # selenium-server-standalone
 
 Composer distribution of Selenium Server Standalone, the browser automation framework. 
-Adds a executable to your composer bin directory.
+It includes the `chromedriver`, needed to control Chrome/Chromium browsers.
+Adds an executable to your composer bin directory.
 
 
 ## Installation
@@ -22,13 +23,13 @@ The command `composer install` will make the selenium executable from inside `bi
 ## Usage
 
 ```bash
-$ bin/selenium-server-standalone
+$ vendor/bin/selenium-server-standalone
 ```
 
 Arguments are supported.
 
 ```bash
-$ bin/selenium-server-standalone -port 4445
+$ vendor/bin/selenium-server-standalone -port 4445
 ```
 
 
