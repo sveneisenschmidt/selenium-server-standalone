@@ -46,7 +46,7 @@ class ExecutableTest extends \PHPUnit_Framework_TestCase
         $directory = sprintf('%s/../bin', TESTS_DIR);
         $executable = sprintf('%s/selenium-server-standalone -h 2>&1', realpath($directory));
 
-        $this->expectOutputRegex('/Running as a standalone server/');
+        $this->expectOutputRegex('/Usage: (.*)/');
         passthru($executable);
     }
 
