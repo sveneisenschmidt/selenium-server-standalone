@@ -1,5 +1,12 @@
 sudo: false
 
+dist: trusty
+
+addons:
+  apt:
+    packages:
+    - oracle-java8-installer
+
 git:
   depth: 50
 
@@ -11,6 +18,7 @@ cache:
 php:
   - 5.5
   - 5.6
+  - 7.0
   - nightly
 
 matrix:
