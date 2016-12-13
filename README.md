@@ -5,6 +5,10 @@
 
 Composer distribution of Selenium Server Standalone, the browser automation framework.
 
+## Attention!
+
+Starting with 3.0.1-beta1 (Selenium Server Standalone 3.0.1) the `bin/selenium-server-standalone` script does not fully work with parameters. Please see the following [issue](https://github.com/sveneisenschmidt/selenium-server-standalone/issues/17) for more information.
+
 ## Installation
 
 #### Inside your composer-powered project
