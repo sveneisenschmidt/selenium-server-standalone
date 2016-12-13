@@ -12,6 +12,12 @@ Composer distribution of Selenium Server Standalone, the browser automation fram
 composer require se/selenium-server-standalone
 ```
 
+#### Standalone
+
+```bash
+composer install
+```
+
 The command `composer install` will make the selenium executable from inside `bin`.
 
 ## Usage
