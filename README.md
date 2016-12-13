@@ -34,7 +34,7 @@ $ bin/selenium-server-standalone -port 4445
 
 ## Known Issues
 
-1. Web Driver
+1. Arguments/Web Driver configuration
 Due changes how Selenium handles arguments/system properties (see [Issue #2566](https://github.com/SeleniumHQ/selenium/issues/2566)), system properties (-D...) can not be passed though the `bin/selenium-server-standalone` file anymore, this affects mostly the web driver argument (`-Dwebdriver.*.driver`) (see [Issue #17](https://github.com/sveneisenschmidt/selenium-server-standalone/issues)). The problem is solved by having the driver in your `PATH` variable.
 
 ## Tests
