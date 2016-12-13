@@ -5,21 +5,11 @@
 
 Composer distribution of Selenium Server Standalone, the browser automation framework.
 
-## Attention!
-
-Starting with 3.0.1-beta1 (Selenium Server Standalone 3.0.1) the `bin/selenium-server-standalone` script does not fully work with parameters. Please see the following [issue](https://github.com/sveneisenschmidt/selenium-server-standalone/issues/17) for more information.
-
 ## Installation
 
 #### Inside your composer-powered project
 ```bash
 composer require se/selenium-server-standalone
-```
-
-#### Standalone
-
-```bash
-composer install
 ```
 
 The command `composer install` will make the selenium executable from inside `bin`.
@@ -35,6 +25,11 @@ Arguments are supported.
 ```bash
 $ bin/selenium-server-standalone -port 4445
 ```
+
+## Known Issues
+
+1. Web Driver
+Due changes how Selenium handles arguments/system properties (see [Issue #2566](https://github.com/SeleniumHQ/selenium/issues/2566)), system properties (-D...) can not be passed though the `bin/selenium-server-standalone` file anymore, this affects mostly the web driver argument (`-Dwebdriver.*.driver`) (see [Issue #17](https://github.com/sveneisenschmidt/selenium-server-standalone/issues)). The problem is solved by having the driver in your `PATH` variable.
 
 ## Tests
 
