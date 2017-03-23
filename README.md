@@ -35,7 +35,7 @@ $ bin/selenium-server-standalone -port 4445
 ## Known Issues
 
 1. Arguments/Web Driver configuration
-Due changes how Selenium handles arguments/system properties (see [Issue #2566](https://github.com/SeleniumHQ/selenium/issues/2566)), system properties (-D...) can not be passed though the `bin/selenium-server-standalone` file anymore, this affects mostly the web driver argument (`-Dwebdriver.*.driver`) (see [Issue #17](https://github.com/sveneisenschmidt/selenium-server-standalone/issues)). The problem is solved by having the driver in your `PATH` variable.
+Due to changes how Selenium handles arguments/system properties (see [Issue #2566](https://github.com/SeleniumHQ/selenium/issues/2566)), system properties (-D...) can not be passed though the `bin/selenium-server-standalone` file anymore, this affects mostly the web driver argument (`-Dwebdriver.*.driver`) (see [Issue #17](https://github.com/sveneisenschmidt/selenium-server-standalone/issues)). The problem is solved by having the driver in your `PATH` variable.
 
 ## Tests
 
@@ -44,4 +44,4 @@ bin/phpunit
 ```
 
 Release numbers are synchronised with the Selenium versions.
-Version of this release is *v3.2.0*
+Version of this release is *v3.3.1*
