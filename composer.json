@@ -12,6 +12,10 @@
         {
             "name": "Sven Eisenschmidt",
             "email": "sven.eisenschmidt@gmail.com"
+        },
+        {
+            "name": "James Titcumb",
+            "email": "hello@jamestitcumb.com"
         }
     ],
     "require-dev": {
