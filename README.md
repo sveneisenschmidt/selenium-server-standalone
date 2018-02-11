@@ -44,4 +44,4 @@ bin/phpunit
 ```
 
 Release numbers are synchronised with the Selenium versions.
-Version of this release is *v3.9.0*
+Version of this release is *v3.9.1*
