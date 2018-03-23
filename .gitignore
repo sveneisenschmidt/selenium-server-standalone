@@ -2,4 +2,4 @@ vendor
 composer.phar
 .idea
 bin/phpunit
-
+.DS_Store
