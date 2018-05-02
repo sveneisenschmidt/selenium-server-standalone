@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #see http://stackoverflow.com/questions/7665/how-to-resolve-symbolic-links-in-a-shell-script
 SELF_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P) && SELF_PATH=$SELF_PATH/$(basename -- "$0")
@@ -8,4 +8,22 @@ while [ -h "$SELF_PATH" ]; do
     SELF_PATH=$(cd "$DIR" && cd $(dirname -- "$SYM") && pwd)/$(basename -- "$SYM")
 done
 
-exec java -jar "${SELF_PATH}.jar" "$@"
+#check if argument is a java system property or an argument for the selenium server, see issue #17
+#see https://stackoverflow.com/questions/192249/how-do-i-parse-command-line-arguments-in-bash/14203146#14203146
+ARGS=()
+JAVASYTEMPROPERTIES=()
+while [[ $# -gt 0 ]]
+do
+    key="$1"
+    case $key in
+        "-D"* ) #java system property has to be placed before the -jar argument
+        JAVASYTEMPROPERTIES+=("$1")
+        ;;
+        *) #other arguments have to be put after the -jar
+        ARGS+=("$1") 
+        ;;
+    esac
+    shift
+done
+
+exec java "${JAVASYTEMPROPERTIES[@]}" -jar "${SELF_PATH}.jar" "${ARGS[@]}"
